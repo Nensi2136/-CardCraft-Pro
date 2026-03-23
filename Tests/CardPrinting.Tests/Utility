@@ -1,0 +1,43 @@
+using System;
+using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Card_Service.Data.Repositories;
+using Card_Service.Services.Interfaces;
+
+namespace TestTemplateUpdate
+{
+    class Program
+    {
+        static async Task Main(string[] args)
+        {
+            // This would need the full DI setup, but for now let's create a simple test
+            Console.WriteLine("Testing template image path update...");
+            
+            // For testing, let's manually set the File_Path
+            // In a real scenario, you'd use the service properly
+            try
+            {
+                // Test file path
+                var testPath = "/templates/3c16d432-ede9-4337-8288-c4e0f7cb940a.jpeg";
+                Console.WriteLine($"Setting File_Path to: {testPath}");
+                
+                // Check if file exists
+                var fullPath = @"E:\AAD\PROJECT\templates\3c16d432-ede9-4337-8288-c4e0f7cb940a.jpeg";
+                if (System.IO.File.Exists(fullPath))
+                {
+                    Console.WriteLine("Template image file exists!");
+                    Console.WriteLine("File size: " + new System.IO.FileInfo(fullPath).Length + " bytes");
+                }
+                else
+                {
+                    Console.WriteLine("Template image file NOT found!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+}
