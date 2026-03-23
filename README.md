@@ -180,14 +180,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🆘 Support
-
-Need help or want to join the community?
-- Join our [Discord](https://discord.gg/shDEGBSe2d)
-- Created with [Mocha](https://getmocha.com)
-
----
-
 ## 🎯 Key Features Highlight
 
 - **🎨 Professional Templates**: Multiple professionally designed card templates
